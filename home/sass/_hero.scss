@@ -1,0 +1,19 @@
+.slick {
+  &-arrow {
+    display: none !important;
+  }
+  &-dots {
+    width: 16px;
+    height: 16px;
+    background: $gray-a8;
+    font-size: 0;
+    border-radius: 100rem;
+    margin-left: -10px;
+    li {
+      margin-left: 10px;
+    }
+  }
+}
+.hero {
+  margin-bottom: 120px;
+}

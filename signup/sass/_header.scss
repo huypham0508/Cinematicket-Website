@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-container {
+  }
+  &-heading a {
+    font-family: $font-primary;
+  }
+}

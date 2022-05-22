@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.signin-container {
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 10px;
+}
+.signin-heading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.3428571429;
+  color: #f08041;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.signin-input {
+  height: 50px;
+  width: 300px;
+  padding: 0 15px;
+  border: 2px #ccc solid;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  transition: all 0.3s linear;
+}
+.signin-input:focus {
+  border: 2px #6e6a6a solid;
+}
+.signin-none {
+  margin-bottom: 5px;
+}
+.signin-username,
+.signin-password {
+  position: relative;
+}
+.signin-password {
+  margin-bottom: 20px;
+}
+.signin-label {
+  user-select: none;
+  pointer-events: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #cccccc;
+  position: absolute;
+  left: 17px;
+  transform: translateY(50%);
+  transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.signin-input:not(:placeholder-shown) + .signin-label,
+.signin .signin-input:focus + .signin-label {
+  color: #6e6a6a;
+  left: 10px;
+  transform: translateY(-50%);
+  background: #fff;
+}
+
+.signin-button {
+  display: block;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 auto;
+  width: 300px;
+  padding: 15px 0;
+  background: linear-gradient(
+    90.02deg,
+    #c923b8 31.05%,
+    rgba(55, 91, 217, 0.738839) 96.64%
+  );
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.signin-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+  margin-bottom: 30px;
+}
+.signin-icons a {
+  margin-left: 10px;
+}
+
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  color: #ccc;
+}
+
+.toggle-password svg {
+  width: 20px;
+  cursor: pointer;
+}
+
+.field input {
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  border: 1px solid #e8eaff;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+
+.field input:focus {
+  border-color: #6a5af9;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.eye-open {
+  display: none;
+}
+
+.eye-open.is-active {
+  display: block;
+}
+
+.eye-open.is-active + .eye-close {
+  display: none;
+}
+
+/*# sourceMappingURL=app.css.map */
