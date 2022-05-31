@@ -81,3 +81,11 @@
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 1439.98px) {
+  .hot {
+    &-buy {
+      left: 180px;
+    }
+  }
+}

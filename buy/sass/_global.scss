@@ -1,0 +1,22 @@
+body {
+  max-width: 2590px;
+  padding: 0 15px;
+  padding-top: 55px;
+  font-size: 16px;
+  font-family: $font-primary;
+  overflow-x: hidden;
+  background-image: url(https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  padding: 50px 61px;
+  margin: 0 auto;
+  background: rgba(43, 46, 62, 0.69);
+  border-radius: 10px;
+}

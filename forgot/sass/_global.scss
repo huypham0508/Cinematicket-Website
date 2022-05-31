@@ -1,0 +1,19 @@
+body {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: $font-primary;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-image: url(https://www.teahub.io/photos/full/229-2296496_chill-background-for-windows.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

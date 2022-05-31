@@ -1,0 +1,179 @@
+.signin {
+  &-container {
+    padding: 30px 25px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  &-heading {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: calc(47 / 35);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  &-input {
+    height: 50px;
+    width: 300px;
+    padding: 0 15px;
+    border: 2px #ccc solid;
+    background: rgba(184, 184, 184, 0.7);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: all 0.3s linear;
+    &:focus {
+      border: 2px rgb(0, 0, 0) solid;
+    }
+  }
+  &-none {
+    margin-bottom: 5px;
+  }
+  &-username,
+  &-password {
+    position: relative;
+  }
+  &-label {
+    user-select: none;
+    pointer-events: none;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    position: absolute;
+    left: 17px;
+    transform: translateY(50%);
+    transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+  }
+  &-input:not(:placeholder-shown) + .signin-label,
+  .signin-input:focus + .signin-label {
+    color: rgb(100, 100, 100);
+    left: 10px;
+    transform: translate(-10%, -100%);
+    background: transparent;
+  }
+
+  &-forgot {
+    display: block;
+    float: right;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    text-decoration-line: underline;
+    color: $blue-2f;
+    margin-bottom: 20px;
+  }
+  &-button {
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(23 / 20);
+    color: $white;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    width: 300px;
+    padding: 15px 0;
+    background: linear-gradient(
+      90.02deg,
+      #c923b8 31.05%,
+      rgba(55, 91, 217, 0.738839) 96.64%
+    );
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  &-more {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    border-bottom: 2px #ccc solid;
+    margin-bottom: 30px;
+  }
+  &-or {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(23 / 20);
+    color: #cccccc;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    margin-bottom: 30px;
+    a {
+      margin-left: 10px;
+    }
+  }
+  &-create {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: #000000;
+    text-align: center;
+    a {
+      color: $blue-2f;
+      font-weight: bold;
+    }
+  }
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  color: #ccc;
+}
+.toggle-password svg {
+  width: 20px;
+  cursor: pointer;
+}
+.field input {
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  border: 1px solid #e8eaff;
+  border-radius: 4px;
+
+  transition: all 0.2s linear;
+}
+.field input:focus {
+  border-color: rgb(0, 0, 0);
+}
+.label {
+  display: inline-block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.eye-open {
+  display: none;
+}
+.eye-open.is-active {
+  display: block;
+}
+.eye-open.is-active + .eye-close {
+  display: none;
+}
+.forgot {
+  max-width: 450px;
+  width: 100%;
+  height: 400px;
+  padding: 30px 25px;
+  border-radius: 8px;
+  background: rgba(184, 184, 184, 0.7);
+}

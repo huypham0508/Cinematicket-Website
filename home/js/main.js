@@ -4,5 +4,14 @@ $(".hero-container").slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 1000,
-  speed: 1000,
+  speed: 2000,
 });
+
+const navSlide = () => {
+  const toogleBar = document.querySelector(".menu-active");
+  const menu = document.querySelector(".menu-list");
+  toogleBar.addEventListener("click", () => {
+    menu.classList.toggle("is-show");
+  });
+};
+navSlide();

@@ -1,0 +1,101 @@
+.buy {
+  &-header {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &-heading {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    color: $orange-f0;
+    margin-left: 505px;
+    margin-bottom: 18px;
+  }
+  &-content {
+    margin-left: 200px;
+    padding-left: 37px;
+    height: 400px;
+    border-left: 1px solid #cccccc;
+  }
+  &-name {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: $white;
+    margin-bottom: 7px;
+    display: block;
+    &-input {
+      cursor: pointer;
+      padding: 13px 12px;
+      border-radius: 10px;
+      max-width: 297px;
+      width: 100%;
+      margin-bottom: 37px;
+    }
+  }
+  &-rooms-input,
+  &-chair-input {
+    cursor: pointer;
+    padding: 13px 12px;
+    border-radius: 10px;
+    max-width: 80px;
+    width: 100%;
+    margin-right: 18px;
+  }
+  &-chair-input {
+    margin-left: 2px;
+  }
+  &-time-input {
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 13px 12px;
+    border-radius: 10px;
+    max-width: 112px;
+    width: 100%;
+    margin-right: 18px;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-select {
+    margin-bottom: 50px;
+  }
+  &-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-buy-btn {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-decoration: none;
+    color: #ffffff;
+    padding: 17px 28px;
+    background: linear-gradient(
+      90.02deg,
+      #c923b8 31.05%,
+      rgba(55, 91, 217, 0.738839) 96.64%
+    );
+    border-radius: 8px;
+  }
+  &-back-btn {
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-decoration: none;
+    color: $orange-f0;
+    padding: 15px 26px;
+    border: 2px solid $orange-f0;
+    border-radius: 10px;
+    margin-left: 43px;
+  }
+}
