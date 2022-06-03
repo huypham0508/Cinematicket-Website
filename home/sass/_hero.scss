@@ -15,6 +15,16 @@
   }
 }
 .hero {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   padding-top: 120px;
+  &-heading {
+    max-width: 1170px;
+    margin: 0 auto;
+    font-size: 35px;
+    color: $blue-2f;
+    font-weight: bold;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
 }

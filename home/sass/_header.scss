@@ -29,10 +29,10 @@
       font-weight: 400;
       font-family: $font-primary;
       text-decoration: none;
-      color: $gray-81;
+      color: $white;
       transition: all 0.3s linear;
       &:hover {
-        color: $dark-00;
+        color: $gray-81;
       }
     }
     &:hover {
@@ -92,7 +92,7 @@
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
-  color: #818181;
+  color: $white;
   background-color: transparent;
   transition: all 0.3s linear;
   border: none;
@@ -140,33 +140,32 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  color: #000000;
+  color: $gray-81;
 }
 .menu-list {
   display: none;
   position: fixed;
   list-style: none;
-  right: 200px;
-  top: -300px;
   width: 250px;
   height: 400px;
   padding: 20px 25px;
   border-radius: 15px;
-  background-image: linear-gradient(to right, #0a1896, rgb(156, 16, 110));
+  background-image: linear-gradient(
+    to right,
+    #0a1896cb,
+    rgba(156, 16, 109, 0.603)
+  );
+  transform: translateY(20%);
   z-index: 9999;
   transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .menu-active {
   display: none;
-  font-size: 30px;
+  font-size: 50px;
   color: #fff;
   z-index: 999999;
 }
-.is-show {
-  transform: translateX(100%);
-  right: 550px;
-  top: 0;
-}
+
 .active {
   color: #000;
 }
@@ -182,8 +181,8 @@
 @media screen and (max-width: 1439.98px) {
   .header {
     &-container {
-      padding: 15px 50px;
-      width: 1024px;
+      padding: 15px 220px;
+      width: 1440px;
     }
     &-items {
       font-size: 12px;
@@ -237,7 +236,8 @@
     font-size: 16px;
   }
   main {
-    width: 1000px;
+    width: 1440px;
+    padding: 0 200px;
   }
 }
 @media screen and (max-width: 1023.98px) {
@@ -246,9 +246,9 @@
       width: 100px;
     }
     &-container {
-      padding: 15px 100px;
-      width: 768px;
-      position: relative;
+      padding: 15px 200px;
+      width: 1024px;
+      position: fixed;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -266,7 +266,7 @@
       transition: all 0.3s linear;
       margin-bottom: 15px;
       a {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 900;
         font-family: $font-primary;
         text-decoration: none;
@@ -301,15 +301,21 @@
       display: none;
     }
     &-signin {
+      margin-left: 0;
+      display: inline-block;
+      position: relative;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
       a {
-        padding: 10px 5px;
-        font-size: 14px;
+        padding: 8px 10px;
+        font-size: 16px;
         border-radius: 8px;
       }
     }
   }
   .dropbtn {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 900;
     font-family: $font-primary;
     text-decoration: none;
@@ -317,21 +323,24 @@
     transition: all 0.3s linear;
   }
   .dropdown {
-    transform: translateX(-8px);
+    transform: translateX(-6px);
   }
   .menu-list {
     display: block;
-    right: 200px;
-    transform: translateY(-100%);
+    top: 70px;
+    transform: translateY(50%);
+    transform: translateX(400%);
   }
   .menu-active {
-    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    font-size: 40px;
     color: #fff;
     z-index: 999999;
   }
   .is-show {
-    transform: translateY(20%);
-    right: 200px;
+    top: 70px;
+    transform: translateX(200%);
   }
   .active {
     color: #000;

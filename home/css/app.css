@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -49,6 +50,7 @@ h6 {
 }
 
 body {
+  background-image: linear-gradient(120deg, #250312, #0a073b);
   max-width: 1470px;
   padding: 0 15px;
   margin: 0 auto;
@@ -104,11 +106,11 @@ main {
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
-  color: #818181;
+  color: #fff;
   transition: all 0.3s linear;
 }
 .header-items a:hover {
-  color: #000000;
+  color: #818181;
 }
 .header-items:hover {
   color: #000000;
@@ -166,7 +168,7 @@ main {
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
-  color: #818181;
+  color: #fff;
   background-color: transparent;
   transition: all 0.3s linear;
   border: none;
@@ -214,35 +216,28 @@ main {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  color: #000000;
+  color: #818181;
 }
 
 .menu-list {
   display: none;
   position: fixed;
   list-style: none;
-  right: 200px;
-  top: -300px;
   width: 250px;
   height: 400px;
   padding: 20px 25px;
   border-radius: 15px;
-  background-image: linear-gradient(to right, #0a1896, #9c106e);
+  background-image: linear-gradient(to right, #0a1896cb, rgba(156, 16, 109, 0.603));
+  transform: translateY(20%);
   z-index: 9999;
   transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .menu-active {
   display: none;
-  font-size: 30px;
+  font-size: 50px;
   color: #fff;
   z-index: 999999;
-}
-
-.is-show {
-  transform: translateX(100%);
-  right: 550px;
-  top: 0;
 }
 
 .active {
@@ -257,8 +252,8 @@ main {
 }
 @media screen and (max-width: 1439.98px) {
   .header-container {
-    padding: 15px 50px;
-    width: 1024px;
+    padding: 15px 220px;
+    width: 1440px;
   }
   .header-items {
     font-size: 12px;
@@ -311,7 +306,8 @@ main {
   }
 
   main {
-    width: 1000px;
+    width: 1440px;
+    padding: 0 200px;
   }
 }
 @media screen and (max-width: 1023.98px) {
@@ -319,9 +315,9 @@ main {
     width: 100px;
   }
   .header-container {
-    padding: 15px 100px;
-    width: 768px;
-    position: relative;
+    padding: 15px 200px;
+    width: 1024px;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -340,7 +336,7 @@ main {
     margin-bottom: 15px;
   }
   .header-items a {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 900;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
@@ -373,14 +369,22 @@ main {
   .header-more {
     display: none;
   }
+  .header-signin {
+    margin-left: 0;
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .header-signin a {
-    padding: 10px 5px;
-    font-size: 14px;
+    padding: 8px 10px;
+    font-size: 16px;
     border-radius: 8px;
   }
 
   .dropbtn {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 900;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
@@ -389,24 +393,27 @@ main {
   }
 
   .dropdown {
-    transform: translateX(-8px);
+    transform: translateX(-6px);
   }
 
   .menu-list {
     display: block;
-    right: 200px;
-    transform: translateY(-100%);
+    top: 70px;
+    transform: translateY(50%);
+    transform: translateX(400%);
   }
 
   .menu-active {
-    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    font-size: 40px;
     color: #fff;
     z-index: 999999;
   }
 
   .is-show {
-    transform: translateY(20%);
-    right: 200px;
+    top: 70px;
+    transform: translateX(200%);
   }
 
   .active {
@@ -430,8 +437,18 @@ main {
 }
 
 .hero {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   padding-top: 120px;
+}
+.hero-heading {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 35px;
+  color: #2f61e1;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .hot {
@@ -522,6 +539,21 @@ main {
     left: 180px;
   }
 }
+@media screen and (max-width: 1023.98px) {
+  .hot-list {
+    flex-direction: column;
+  }
+  .hot-buy {
+    left: 250px;
+  }
+  .hot-heading {
+    font-size: 30px;
+    line-height: 0.78125;
+    margin-bottom: 50px;
+    text-align: center;
+    transform: translateX(-20%);
+  }
+}
 .vn {
   margin-bottom: 42px;
 }
@@ -608,6 +640,21 @@ main {
 @media screen and (max-width: 1439.98px) {
   .vn-buy {
     left: 180px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .vn-list {
+    flex-direction: column;
+  }
+  .vn-buy {
+    left: 250px;
+  }
+  .vn-heading {
+    font-size: 30px;
+    line-height: 0.78125;
+    margin-bottom: 50px;
+    text-align: center;
+    transform: translateX(-20%);
   }
 }
 .hq {
@@ -697,6 +744,223 @@ main {
   .hq-buy {
     left: 180px;
   }
+}
+@media screen and (max-width: 1023.98px) {
+  .hq-list {
+    flex-direction: column;
+  }
+  .hq-buy {
+    left: 250px;
+  }
+  .hq-heading {
+    font-size: 30px;
+    line-height: 0.78125;
+    margin-bottom: 50px;
+    text-align: center;
+    transform: translateX(-20%);
+  }
+}
+.footer {
+  padding-bottom: 50px;
+}
+.footer-logo {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ccc;
+  border-top: 3px solid #ccc;
+  padding: 30px;
+}
+.footer-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-list {
+  list-style: none;
+}
+.footer-items {
+  color: #706d6d;
+}
+.footer-items:first-child {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.standard-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 30px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 35px;
+  margin-bottom: 30px;
+}
+.standard-heading {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  font-size: 35px;
+  color: #2f61e1;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+.standard-items-one, .standard-items-two, .standard-items-three, .standard-items-four, .standard-items-five, .standard-items-six {
+  position: relative;
+  cursor: pointer;
+}
+
+.standard-items-one::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(71, 3, 73, 0.637), rgba(12, 49, 172, 0.637));
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.standard-items-one:hover::before {
+  content: "Doctor Strange 2";
+  width: 91%;
+  height: 50%;
+}
+
+.standard-items-two::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(71, 3, 73, 0.637), rgba(12, 49, 172, 0.637));
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.standard-items-two:hover::before {
+  content: "578 Phát đạn...";
+  width: 91%;
+  height: 50%;
+}
+
+.standard-items-three::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(71, 3, 73, 0.637), rgba(12, 49, 172, 0.637));
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.standard-items-three:hover::before {
+  content: "Mồi cá mập";
+  width: 91%;
+  height: 50%;
+}
+
+.standard-items-four::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(71, 3, 73, 0.637), rgba(12, 49, 172, 0.637));
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.standard-items-four:hover::before {
+  content: "Nghề siêu dễ";
+  width: 91%;
+  height: 50%;
+}
+
+.standard-items-five::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(71, 3, 73, 0.637), rgba(12, 49, 172, 0.637));
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.standard-items-five:hover::before {
+  content: "Trịnh và em";
+  width: 91%;
+  height: 50%;
+}
+
+.standard-items-six::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(71, 3, 73, 0.637), rgba(12, 49, 172, 0.637));
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.standard-items-six:hover::before {
+  content: "Harry Potter ";
+  width: 91%;
+  height: 50%;
+}
+
+.logo-logo {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
 }
 
 /*# sourceMappingURL=app.css.map */

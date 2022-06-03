@@ -89,3 +89,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1023.98px) {
+  .vn {
+    &-list {
+      flex-direction: column;
+    }
+    &-buy {
+      left: 250px;
+    }
+    &-heading {
+      font-size: 30px;
+      line-height: calc(25 / 32);
+      margin-bottom: 50px;
+      text-align: center;
+      transform: translateX(-20%);
+    }
+  }
+}

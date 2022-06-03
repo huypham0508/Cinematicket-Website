@@ -1,0 +1,34 @@
+.footer {
+  padding-bottom: 50px;
+  &-logo {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ccc;
+    border-top: 3px solid #ccc;
+    padding: 30px;
+  }
+  &-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-list {
+    list-style: none;
+  }
+  &-items {
+    &:first-child {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-family: $font-primary;
+      color: #fff;
+    }
+    color: #706d6d;
+  }
+}

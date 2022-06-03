@@ -1,0 +1,193 @@
+.standard {
+  &-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 30px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 35px;
+    margin-bottom: 30px;
+  }
+  &-heading {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px;
+    font-size: 35px;
+    color: $blue-2f;
+    font-weight: bold;
+    font-family: $font-primary;
+    text-transform: uppercase;
+  }
+  &-items {
+    &-one,
+    &-two,
+    &-three,
+    &-four,
+    &-five,
+    &-six {
+      position: relative;
+      cursor: pointer;
+    }
+  }
+}
+
+.standard-items-one::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(71, 3, 73, 0.637),
+    rgba(12, 49, 172, 0.637)
+  );
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.standard-items-one:hover {
+  &::before {
+    content: "Doctor Strange 2";
+    width: 91%;
+    height: 50%;
+  }
+}
+//--------------------------------
+.standard-items-two::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(71, 3, 73, 0.637),
+    rgba(12, 49, 172, 0.637)
+  );
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.standard-items-two:hover {
+  &::before {
+    content: "578 Phát đạn...";
+    width: 91%;
+    height: 50%;
+  }
+}
+.standard-items-three::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(71, 3, 73, 0.637),
+    rgba(12, 49, 172, 0.637)
+  );
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.standard-items-three:hover {
+  &::before {
+    content: "Mồi cá mập";
+    width: 91%;
+    height: 50%;
+  }
+}
+.standard-items-four::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(71, 3, 73, 0.637),
+    rgba(12, 49, 172, 0.637)
+  );
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.standard-items-four:hover {
+  &::before {
+    content: "Nghề siêu dễ";
+    width: 91%;
+    height: 50%;
+  }
+}
+.standard-items-five::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(71, 3, 73, 0.637),
+    rgba(12, 49, 172, 0.637)
+  );
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.standard-items-five:hover {
+  &::before {
+    content: "Trịnh và em";
+    width: 91%;
+    height: 50%;
+  }
+}
+.standard-items-six::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    rgba(71, 3, 73, 0.637),
+    rgba(12, 49, 172, 0.637)
+  );
+  height: 50%;
+  width: 0%;
+  padding: 20px 0 0;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $font-primary;
+  color: #fff;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.standard-items-six:hover {
+  &::before {
+    content: "Harry Potter ";
+    width: 91%;
+    height: 50%;
+  }
+}
