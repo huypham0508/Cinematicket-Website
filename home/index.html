@@ -55,16 +55,42 @@
               <ion-icon class="header-search-icon" name="search"></ion-icon>
               <input type="text" placeholder="Tìm kiếm" />
             </form>
-            <div class="header-signin">
-              <a href="#">Đăng nhập</a>
+            <div class="header-mode">
+              <div class="header-sun">
+                <img src="./images/sun.png" alt="" />
+              </div>
+              <div class="header-moon is-mode">
+                <img src="./images/moon.png" alt="" />
+              </div>
             </div>
-          </div>
-          <div class="menu-active">
-            <ion-icon name="menu-outline"></ion-icon>
+            <div class="user">
+              <div class="userbtn">
+                <img src="https://source.unsplash.com/random" alt="" />
+              </div>
+              <div class="user-content">
+                <span
+                  style="color: #f3a616; font-weight: bold"
+                  class="user-coin"
+                  ><ion-icon name="card-outline"></ion-icon>
+                  300 coin
+                </span>
+                <span class="user-btn">Thay đổi avatar</span>
+                <button class="menu-active">Tùy chọn</button>
+              </div>
+              <ion-icon class="user-icon" name="caret-down-outline"> </ion-icon>
+            </div>
           </div>
         </div>
       </div>
       <ul class="menu-list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <span class="menu-delete">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </span>
+      </ul>
+      <ul class="menu-list-mobile">
         <li class="header-items">
           <div class="dropdown">
             <button class="dropbtn">Danh mục</button>
@@ -72,17 +98,16 @@
               <a href="#hot">Phim hot</a>
               <a href="#vn">Phim việt nam</a>
               <a href="#hq">Phim nước ngoài</a>
+              <a href="#footer">Đến cuối trang</a>
             </div>
             <ion-icon class="header-icon" name="caret-down-outline"> </ion-icon>
           </div>
         </li>
         <li class="header-items"><a href="#">Mua vé</a></li>
         <li class="header-items"><a href="#">Trợ giúp</a></li>
-        <li>
-          <div class="header-signin">
-            <a href="#">Đăng nhập</a>
-          </div>
-        </li>
+        <span class="menu-delete-two">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </span>
       </ul>
     </header>
     <main>
@@ -101,13 +126,31 @@
             </a>
           </div>
         </div>
+        <div class="img-background-header">
+          <img src="./images/background.png" alt="" />
+        </div>
       </section>
       <seciton class="logo">
         <div class="logo-logo">
-          <img src="./images/galaxy.png" alt="" />
-          <img src="./images/cgv.png" alt="" />
-          <img src="./images/lotte.png" alt="" />
-          <img src="./images/cineworld.png" alt="" />
+          <img
+            src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/galaxy.png?raw=true"
+            alt=""
+          />
+          <img
+            src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/cgv.png?raw=true"
+            alt=""
+          />
+          <img
+            src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/lotte.png?raw=true"
+            alt=""
+          />
+          <img
+            src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/cineworld.png?raw=true"
+            alt=""
+          />
+        </div>
+        <div class="img-background">
+          <img src="./images/background.png" alt="" />
         </div>
       </seciton>
       <section class="standard">
@@ -116,22 +159,40 @@
         >
         <div class="standard-container">
           <a href="#" class="standard-items-one">
-            <img src="./images/standard1.png" alt="" />
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/standard1.png?raw=true"
+              alt=""
+            />
           </a>
           <a href="#" class="standard-items-two">
-            <img src="./images/standard2.png" alt="" />
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/standard2.png?raw=true"
+              alt=""
+            />
           </a>
           <a href="#" class="standard-items-three">
-            <img src="./images/standard3.png" alt="" />
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/standard3.png?raw=true"
+              alt=""
+            />
           </a>
           <a href="#" class="standard-items-four">
-            <img src="./images/standard4.png" alt="" />
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/standard4.png?raw=true"
+              alt=""
+            />
           </a>
           <a href="#" class="standard-items-five">
-            <img src="./images/standard5.png" alt="" />
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/standard5.png?raw=true"
+              alt=""
+            />
           </a>
           <a href="#" class="standard-items-six">
-            <img src="./images/standard6.png" alt="" />
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/standard6.png?raw=true"
+              alt=""
+            />
           </a>
         </div>
       </section>
@@ -299,6 +360,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="img-background">
+          <img src="./images/background.png" alt="" />
         </div>
       </section>
       <section id="vn" class="vn">
@@ -633,6 +697,9 @@
       </section>
     </main>
     <footer class="footer" id="footer" style="position: relative">
+      <div class="img-background">
+        <img src="./images/background.png" alt="" />
+      </div>
       <div class="container">
         <div class="footer-logo">
           <img src="./images/galaxy.png" alt="" />

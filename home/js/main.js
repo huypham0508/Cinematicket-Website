@@ -15,10 +15,36 @@ $(".standard-container").slick({
   speed: 2000,
 });
 const navSlide = () => {
-  const toogleBar = document.querySelector(".menu-active");
+  const toogleBar = document.querySelector(".user-btn");
+  const activeOption = document.querySelector(".menu-active");
   const menu = document.querySelector(".menu-list");
+  const menuMobile = document.querySelector(".menu-list-mobile");
+  const close = document.querySelector(".menu-delete");
+  const closeTwo = document.querySelector(".menu-delete-two");
   toogleBar.addEventListener("click", () => {
     menu.classList.toggle("is-show");
   });
+  close.addEventListener("click", () => {
+    menu.classList.toggle("is-show");
+  });
+  activeOption.addEventListener("click", () => {
+    menuMobile.classList.toggle("is-show");
+  });
+  closeTwo.addEventListener("click", () => {
+    menuMobile.classList.toggle("is-show");
+  });
 };
 navSlide();
+const mode = () => {
+  const sun = document.querySelector(".header-sun");
+  const moon = document.querySelector(".header-moon");
+  sun.addEventListener("click", () => {
+    sun.classList.toggle("is-mode");
+    moon.classList.toggle("is-mode");
+  });
+  moon.addEventListener("click", () => {
+    sun.classList.toggle("is-mode");
+    moon.classList.toggle("is-mode");
+  });
+};
+mode();

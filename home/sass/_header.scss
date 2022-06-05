@@ -6,7 +6,7 @@
     align-items: center;
     padding: 15px 370px;
     width: 1920px;
-    background-image: linear-gradient(70deg, #0a073b, #250312);
+    background: #07041a;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -49,19 +49,24 @@
   }
   &-search {
     padding: 10px 10px;
-    background: $blue-2f;
     border-radius: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 3px 7px 20px rgba(47, 97, 225, 0.5);
+    background: linear-gradient(
+      90deg,
+      rgba(250, 0, 175, 0.212) 0%,
+      rgba(91, 8, 154, 0.295) 45.15%
+    );
+    box-shadow: 3px 5px 30px rgba(60, 5, 102, 0.7);
     &-icon {
       font-size: 30px;
       color: $white;
       margin-right: 10px;
     }
     input {
-      background: $blue-2f;
+      color: $white;
+      background: transparent;
       &::placeholder {
         color: $white;
         font-weight: 400;
@@ -86,6 +91,12 @@
       text-decoration: none;
     }
   }
+  &-sun,
+  &-moon {
+    margin-left: 50px;
+    cursor: pointer;
+    width: 30px;
+  }
 }
 .dropbtn {
   font-size: 20px;
@@ -98,7 +109,11 @@
   border: none;
   cursor: pointer;
 }
-
+.img-background-header {
+  position: absolute;
+  transform: translateY(-150%);
+  z-index: -1;
+}
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
@@ -142,32 +157,149 @@
 .dropdown:hover .dropbtn {
   color: $gray-81;
 }
-.menu-list {
+/* The container <div> - needed to position the dropdown content */
+.user {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.user-content {
   display: none;
+  position: absolute;
+  transform: translateX(-40%);
+  background: #2f61e1;
+  border-radius: 9px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.user-content span {
+  cursor: pointer;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+/* Change color of user links on hover */
+.user-content span:hover {
+  background-color: #f1f1f1;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Show the user menu on hover */
+.user:hover .user-content {
+  display: block;
+}
+.userbtn {
+  display: inline;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 20px;
+  img {
+    display: inline;
+    margin-left: 10px;
+    border: 2px #fff solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    object-fit: cover;
+  }
+}
+/* Change the background color of the user button when the user content is shown */
+.user:hover .user {
+  color: $gray-81;
+}
+.menu-delete {
+  position: absolute;
+  cursor: pointer;
+  font-size: 35px;
+  color: #fff;
+  right: 5px;
+  top: 5px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  &:hover {
+    color: #000;
+  }
+}
+
+.menu-delete-two {
+  position: absolute;
+  cursor: pointer;
+  font-size: 35px;
+  color: #fff;
+  right: 5px;
+  top: 5px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  &:hover {
+    color: #000;
+  }
+}
+
+.menu-active {
+  display: none;
+}
+.menu-list {
+  display: block;
   position: fixed;
   list-style: none;
   width: 250px;
   height: 400px;
   padding: 20px 25px;
   border-radius: 15px;
-  background-image: linear-gradient(
-    to right,
-    #0a1896cb,
-    rgba(156, 16, 109, 0.603)
-  );
-  transform: translateY(20%);
+  top: 13%;
+  transform: translateX(700%);
+  background-image: linear-gradient(to right, #0a1896, #9c106d);
+  z-index: 9999;
+  transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.menu-list-mobile {
+  display: block;
+  position: fixed;
+  list-style: none;
+  width: 250px;
+  height: 400px;
+  padding: 20px 25px;
+  border-radius: 15px;
+  top: 13%;
+  transform: translateX(900%);
+  background-image: linear-gradient(to right, #0a1896, #9c106d);
   z-index: 9999;
   transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+
 .menu-active {
   display: none;
-  font-size: 50px;
+  width: 100%;
+  cursor: pointer;
   color: #fff;
-  z-index: 999999;
+  background: #2f61e1;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+  &:hover {
+    background-color: #f1f1f1;
+    color: #000;
+    border-radius: 5px;
+  }
 }
-
-.active {
-  color: #000;
+.is-show {
+  transform: translateX(600%);
+}
+.is-mode {
+  display: none;
 }
 @media screen and (max-width: 1599.98px) {
   .header {
@@ -175,6 +307,10 @@
       padding: 15px 130px;
       width: 1440px;
     }
+  }
+  .is-show {
+    top: 11%;
+    transform: translateX(450%);
   }
 }
 
@@ -235,6 +371,9 @@
   .dropbtn {
     font-size: 16px;
   }
+  .is-show {
+    transform: translateX(290%);
+  }
   main {
     width: 1440px;
     padding: 0 200px;
@@ -255,6 +394,7 @@
     &-list {
       display: none;
     }
+
     &-icon {
       transform: translate(-120%, 20%);
     }
@@ -274,30 +414,13 @@
         transition: all 0.3s linear;
       }
     }
-    &-search {
-      padding: 7px 3px;
-      background: $blue-2f;
-      border-radius: 8px;
-      &-icon {
-        font-size: 20px;
-        color: $white;
-        margin-right: 5px;
-      }
-      input {
-        background: $blue-2f;
-        &::placeholder {
-          color: $white;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: calc(23 / 20);
-          color: $white;
-        }
-      }
-    }
     &-list {
       gap: 0 10px;
     }
     &-more {
+      display: block;
+    }
+    &-search {
       display: none;
     }
     &-signin {
@@ -325,25 +448,29 @@
   .dropdown {
     transform: translateX(-6px);
   }
-  .menu-list {
+  .menu-list-mobile {
     display: block;
-    top: 70px;
-    transform: translateY(50%);
-    transform: translateX(400%);
+    position: fixed;
+    list-style: none;
+    width: 250px;
+    height: 400px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #0a1896, #9c106d);
+    top: 7%;
+    transform: translateX(900%);
+    z-index: 9999;
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
   .menu-active {
-    cursor: pointer;
     display: block;
-    font-size: 40px;
-    color: #fff;
-    z-index: 999999;
-  }
-  .is-show {
-    top: 70px;
-    transform: translateX(200%);
   }
   .active {
     color: #000;
     z-index: 999999;
+  }
+  .is-show {
+    top: 7%;
+    transform: translateX(190%);
   }
 }
