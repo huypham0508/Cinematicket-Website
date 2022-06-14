@@ -1,0 +1,44 @@
+.header {
+  margin-bottom: 235px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1170px;
+    z-index: 99999;
+  }
+  &-heading {
+    font-family: "Rubik Moonrocks";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: calc(57 / 48);
+    background: linear-gradient(270deg, #4127e2 8.63%, #d32f56 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-mode {
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  &-avartar {
+    margin-left: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+      margin-left: 15px;
+      border: 2px #fff solid;
+      width: 55px;
+      height: 55px;
+      border-radius: 100rem;
+      object-fit: cover;
+    }
+  }
+}

@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mua vé</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -19,83 +12,166 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/app.css" />
+    <title>Mua vé</title>
   </head>
   <body>
-    <div class="container">
-      <div class="buy-header">
-        <div class="header-logo">
-          <img src="./images/logo.png" alt="" />
-        </div>
-        <h1 class="buy-heading">Mua vé</h1>
-      </div>
-      <form class="buy-main">
-        <div style="width: 500px" class="buy-table">
-          <!-- controls -->
-          <img
-            src="https://images.unsplash.com/photo-1627133805103-ce2d34ccdd37?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
-            alt=""
-          />
-        </div>
-        <div class="buy-content">
-          <div class="buy-select">
-            <label class="buy-name">Tên phim</label>
-            <select class="buy-name-input" name="cars" id="">
-              <option value="bg">Bố già</option>
-            </select>
-            <div class="buy-more">
-              <div>
-                <label class="buy-name">Ghế</label>
-                <select class="buy-rooms-input" name="cars" id="">
-                  <option value="e1">E1</option>
-                  <option value="e1">E2</option>
-                  <option value="e1">E3</option>
-                  <option value="e1">E4</option>
-                  <option value="e1">E5</option>
-                  <option value="e1">E6</option>
-                  <option value="e1">E7</option>
-                  <option value="e1">E8</option>
-                  <option value="e1">E9</option>
-                  <option value="e1">E10</option>
-                  <option value="e1">F1</option>
-                  <option value="e1">F2</option>
-                  <option value="e1">F3</option>
-                  <option value="e1">F4</option>
-                  <option value="e1">F5</option>
-                  <option value="e1">F6</option>
-                  <option value="e1">F7</option>
-                  <option value="e1">F8</option>
-                  <option value="e1">F9</option>
-                  <option value="e1">F10</option>
-                </select>
-              </div>
-              <div>
-                <label class="buy-name">Phòng</label>
-                <select class="buy-chair-input" name="cars" id="">
-                  <option value="bg">1</option>
-                  <option value="bg">2</option>
-                  <option value="bg">3</option>
-                  <option value="bg">4</option>
-                </select>
-              </div>
-              <div>
-                <label class="buy-name">Giờ</label>
-                <select class="buy-time-input" name="cars" id="">
-                  <option value="bg">9:30 AM</option>
-                  <option value="bg">9:30 AM</option>
-                  <option value="bg">9:30 PM</option>
-                  <option value="bg">9:30 PM</option>
-                </select>
-              </div>
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <div class="header-logo">
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <h1 class="header-heading">Mua vé</h1>
+          <div class="header-more">
+            <div class="header-icon">
+              <a href="#">
+                <img src="./images/Vector.png" alt="" />
+              </a>
+            </div>
+            <div class="header-mode">
+              <img src="./images/icon-sun.png" alt="" />
+              <!-- <img src="" alt="" /> -->
+            </div>
+            <div class="header-avartar">
+              <img src="https://source.unsplash.com/random" alt="" />
             </div>
           </div>
-          <div class="buy-button">
-            <a href="#" class="buy-buy-btn">Mua vé</a>
-            <a href="#" class="buy-back-btn">Quay lại</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="background-two">
+        <img src="./images/background2.png" alt="" />
+      </div>
+      <section data-aos="fade-down" id="name" class="name">
+        <div class="container">
+          <div class="name-container">
+            <h4 class="name-title">Chọn tên phim</h4>
+            <select name="name" id="slName" class="name-select">
+              <option class="name-option" value="0">Chọn</option>
+              <option class="name-option" value="1">Phim trịnh và em</option>
+              <option class="name-option" value="2">Phim bố già</option>
+              <option class="name-option" value="3">Phim mắt biếc</option>
+            </select>
+            <a href="#date" class="name-next"> Tiếp theo </a>
+            <div class="background-one">
+              <img src="./images/background1.png" alt="" />
+            </div>
           </div>
         </div>
-      </form>
-    </div>
+      </section>
+      <section id="date" class="date">
+        <div class="container">
+          <div class="date-container">
+            <div class="date-left">
+              <h4 class="date-title">Chọn rạp</h4>
+              <select date="date" id="slrap" class="date-select-cinema">
+                <option class="date-option-cinema" value="0">01</option>
+                <option class="date-option-cinema" value="1">02</option>
+                <option class="date-option-cinema" value="2">03</option>
+                <option class="date-option-cinema" value="3">04</option>
+              </select>
+            </div>
+            <div class="date-right">
+              <h4 class="date-title">Chọn Phòng</h4>
+              <select date="date" id="sldate" class="date-select-room">
+                <option class="date-option-room" value="0">01</option>
+                <option class="date-option-room" value="1">02</option>
+                <option class="date-option-room" value="2">03</option>
+                <option class="date-option-room" value="3">04</option>
+              </select>
+            </div>
+            <a href="#" class="date-back">Quay lại</a>
+            <a href="#seat" class="date-next">Tiếp theo</a>
+            <div class="background-one">
+              <img src="./images/background3.png" alt="" />
+            </div>
+            <div class="background-two-date">
+              <img src="./images/background4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="seat" class="seat">
+        <div class="container">
+          <h4 class="seat-title">Chọn ghế</h4>
+          <div class="seat-container">
+            <div class="seat-list">
+              <ul class="seat-rows">
+                <li class="seat-items">A</li>
+                <li class="seat-items"><span>1</span></li>
+                <li class="seat-items"><span>2</span></li>
+                <li class="seat-items"><span>3</span></li>
+                <li class="seat-items"><span>4</span></li>
+                <li class="seat-items"><span>5</span></li>
+                <li class="seat-items"><span>6</span></li>
+                <li class="seat-items"><span>7</span></li>
+                <li class="seat-items"><span>8</span></li>
+              </ul>
+              <ul class="seat-rows">
+                <li class="seat-items">B</li>
+                <li class="seat-items"><span>1</span></li>
+                <li class="seat-items"><span>2</span></li>
+                <li class="seat-items"><span>3</span></li>
+                <li class="seat-items"><span>4</span></li>
+                <li class="seat-items"><span>5</span></li>
+                <li class="seat-items"><span>6</span></li>
+                <li class="seat-items"><span>7</span></li>
+                <li class="seat-items"><span>8</span></li>
+              </ul>
+              <ul class="seat-rows">
+                <li class="seat-items">C</li>
+                <li class="seat-items"><span>1</span></li>
+                <li class="seat-items"><span>2</span></li>
+                <li class="seat-items"><span>3</span></li>
+                <li class="seat-items"><span>4</span></li>
+                <li class="seat-items"><span>5</span></li>
+                <li class="seat-items"><span>6</span></li>
+                <li class="seat-items"><span>7</span></li>
+                <li class="seat-items"><span>8</span></li>
+              </ul>
+              <ul class="seat-rows">
+                <li class="seat-items">D</li>
+                <li class="seat-items"><span>1</span></li>
+                <li class="seat-items"><span>2</span></li>
+                <li class="seat-items"><span>3</span></li>
+                <li class="seat-items"><span>4</span></li>
+                <li class="seat-items"><span>5</span></li>
+                <li class="seat-items"><span>6</span></li>
+                <li class="seat-items"><span>7</span></li>
+                <li class="seat-items"><span>8</span></li>
+              </ul>
+            </div>
+            <input type="text" placeholder="Số ghế" class="seat-input" />
+            <a href="#date" class="seat-back">Quay lại</a>
+            <a href="#end" class="seat-next">Tiếp theo</a>
+          </div>
+          <div class="background-one-seat">
+            <img src="./images/background5.png" alt="" />
+          </div>
+          <div class="background-two-seat">
+            <img src="./images/background6.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>

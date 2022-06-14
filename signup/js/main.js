@@ -1,18 +1,15 @@
-const togglePassword = document.querySelectorAll(".eye");
-let activeClassName = "is-active";
-togglePassword.forEach((item) => {
-  item.addEventListener("click", handleTogglePassword);
-});
-function handleTogglePassword() {
-  let inputType = "password";
-  const input = this.parentNode?.previousElementSibling;
-  if (this.matches(".eye-close")) {
-    inputType = "text";
-    const eyeOpen = this.previousElementSibling;
-    eyeOpen && eyeOpen.classList.add(activeClassName);
-  } else {
-    inputType = "password";
-    this.classList.remove(activeClassName);
-  }
-  input && input.setAttribute("type", inputType);
-}
+const change = () => {
+  const toogle = document.querySelector(".signin-button");
+  const showNewButton = document.querySelector(".signin-active");
+  const showOldButton = document.querySelector(".signin-bottom");
+  const toogleClose = document.querySelector(".signin-close");
+  toogle.addEventListener("click", () => {
+    showNewButton.classList.toggle("is-show");
+    showOldButton.classList.toggle("is-show");
+  });
+  toogleClose.addEventListener("click", () => {
+    showNewButton.classList.toggle("is-show");
+    showOldButton.classList.toggle("is-show");
+  });
+};
+change();

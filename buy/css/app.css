@@ -11,6 +11,7 @@
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,122 +49,367 @@ h6 {
 }
 
 body {
-  max-width: 2590px;
+  max-width: 1950px;
   padding: 0 15px;
   padding-top: 55px;
+  margin: 0 auto;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  background-image: url(https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #07041a;
+  transition: all 0.23s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .container {
   max-width: 1200px;
-  padding: 50px 61px;
+  padding: 5px 15px;
   margin: 0 auto;
-  background: rgba(43, 46, 62, 0.69);
-  border-radius: 10px;
+  background: transparent;
 }
 
-.buy-header {
+.is-mode {
+  background: #fff;
+}
+
+.header {
+  margin-bottom: 235px;
+}
+.header-container {
   display: flex;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1170px;
+  z-index: 99999;
 }
-.buy-heading {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 1.175;
-  color: #f08041;
-  margin-left: 505px;
-  margin-bottom: 18px;
-}
-.buy-content {
-  margin-left: 200px;
-  padding-left: 37px;
-  height: 400px;
-  border-left: 1px solid #cccccc;
-}
-.buy-name {
-  font-family: "Roboto", sans-serif;
+.header-heading {
+  font-family: "Rubik Moonrocks";
+  font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 48px;
   line-height: 1.1875;
-  color: #fff;
-  margin-bottom: 7px;
-  display: block;
+  background: linear-gradient(270deg, #4127e2 8.63%, #d32f56 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.buy-name-input {
-  cursor: pointer;
-  padding: 13px 12px;
-  border-radius: 10px;
-  max-width: 297px;
-  width: 100%;
-  margin-bottom: 37px;
+.header-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.buy-rooms-input, .buy-chair-input {
-  cursor: pointer;
-  padding: 13px 12px;
-  border-radius: 10px;
-  max-width: 80px;
-  width: 100%;
-  margin-right: 18px;
-}
-.buy-chair-input {
-  margin-left: 2px;
-}
-.buy-time-input {
+.header-mode {
   cursor: pointer;
   margin-left: 15px;
-  padding: 13px 12px;
-  border-radius: 10px;
-  max-width: 112px;
-  width: 100%;
-  margin-right: 18px;
 }
-.buy-main {
+.header-avartar {
+  margin-left: 25px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header-avartar img {
+  margin-left: 15px;
+  border: 2px #fff solid;
+  width: 55px;
+  height: 55px;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
+.name {
+  margin-bottom: 800px;
+}
+.name-container {
+  width: 705.04px;
+  height: 302.52px;
+  padding: 30px;
+  background: linear-gradient(125.88deg, rgba(255, 255, 255, 0.3) 16.18%, rgba(255, 255, 255, 0.4) 117.24%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 56px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
+}
+.name-title {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.2380952381;
+  letter-spacing: 0.07em;
+  color: #e5e5e5;
+  margin-left: 70px;
+}
+.name-select {
+  background: #d9d9d9;
+  box-shadow: 7px 25px 50px -18px rgba(0, 0, 0, 0.25), inset 10px 11px 19px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 15px 10px;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 70px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.16em;
+  color: #000000;
+  transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.name-select:hover {
+  transform: scale(1.02);
+}
+.name-next {
+  position: absolute;
+  padding: 15px 30px;
+  background: #646464;
+  border: 1px solid #646464;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #fff;
+  right: 50px;
+  bottom: 50px;
+  box-shadow: inset 0px 4px 25px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.name-next:hover {
+  background: transparent;
+  padding: 15px 30px;
+  border: 1px solid #000;
+  color: #000;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+
+.background-one {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-30%, 30%);
+  z-index: -1;
+}
+.background-two {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(150%);
+}
+
+.date {
+  margin-bottom: 800px;
+  padding: 210px;
+  padding-bottom: 280px;
+}
+.date-container {
+  width: 705.04px;
+  height: 352.52px;
+  padding: 30px;
+  background: linear-gradient(125.88deg, rgba(255, 255, 255, 0.3) 16.18%, rgba(255, 255, 255, 0.4) 117.24%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 56px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.buy-select {
-  margin-bottom: 50px;
+.date-title {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.2380952381;
+  letter-spacing: 0.07em;
+  color: #e5e5e5;
+  margin-top: 20px;
 }
-.buy-more {
+.date-select-cinema, .date-select-room {
+  background: #d9d9d9;
+  box-shadow: 7px 25px 50px -18px rgba(0, 0, 0, 0.25), inset 10px 11px 19px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 15px 10px;
+  width: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.16em;
+  color: #000000;
+}
+.date-select-cinema {
+  margin-left: 20px;
+  margin-right: 100px;
+}
+.date-select-room {
+  width: 80px;
+  margin-left: 20px;
+}
+.date-next {
+  position: absolute;
+  padding: 15px 30px;
+  background: #646464;
+  border: 1px solid #646464;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #fff;
+  right: 50px;
+  bottom: 50px;
+  box-shadow: inset 0px 4px 25px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.date-next:hover {
+  background: transparent;
+  padding: 15px 30px;
+  border: 1px solid #000;
+  color: #000;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+.date-back {
+  position: absolute;
+  padding: 15px 30px;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #000;
+  right: 200px;
+  bottom: 50px;
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.date-back:hover {
+  color: #d9d9d9;
+}
+
+.background-two-date {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(60%, -60%);
+}
+
+.seat {
+  margin-bottom: 800px;
+  padding: 210px;
+  padding-bottom: 280px;
+}
+.seat-container {
+  width: 705.04px;
+  height: 430px;
+  padding: 30px;
+  background: linear-gradient(125.88deg, rgba(255, 255, 255, 0.3) 16.18%, rgba(255, 255, 255, 0.4) 117.24%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 56px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
+}
+.seat-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.2380952381;
+  letter-spacing: 0.07em;
+  color: #e5e5e5;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.seat-select-cinema, .seat-select-room {
+  background: #d9d9d9;
+  box-shadow: 7px 25px 50px -18px rgba(0, 0, 0, 0.25), inset 10px 11px 19px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 15px 10px;
+  width: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.16em;
+  color: #000000;
+}
+.seat-next {
+  position: absolute;
+  padding: 15px 30px;
+  background: #646464;
+  border: 1px solid #646464;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #fff;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(10%);
+  box-shadow: inset 0px 4px 25px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.seat-next:hover {
+  background: transparent;
+  padding: 15px 30px;
+  border: 1px solid #000;
+  color: #000;
+  box-shadow: none;
+  transform: translateX(10%);
+}
+.seat-back {
+  position: absolute;
+  padding: 15px 30px;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #000;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-110%);
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.seat-back:hover {
+  color: #d9d9d9;
+}
+.seat-rows {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  list-style: none;
+  margin-left: -25px;
 }
-.buy-buy-btn {
-  font-family: "Roboto", sans-serif;
+.seat-items {
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.seat-items span {
+  padding: 5px 15px;
+  background-color: #d9d9d9;
+  text-align: center;
+  border-radius: 100rem;
+}
+.seat-items:first-child {
+  background: transparent;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 17px 28px;
-  background: linear-gradient(90.02deg, #c923b8 31.05%, rgba(55, 91, 217, 0.738839) 96.64%);
+  font-size: 40px;
+  line-height: 1.475;
+  color: #fffdfd;
+}
+.seat-input {
+  width: 100px;
+  padding: 10px 20px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 8px;
+  margin-top: 20px;
 }
-.buy-back-btn {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-decoration: none;
-  color: #f08041;
-  padding: 15px 26px;
-  border: 2px solid #f08041;
-  border-radius: 10px;
-  margin-left: 43px;
+
+.background-one-seat {
+  position: absolute;
+  left: 80%;
+}
+
+.background-two-seat {
+  position: absolute;
+  left: 50%;
+  top: -100%;
 }
 
 /*# sourceMappingURL=app.css.map */

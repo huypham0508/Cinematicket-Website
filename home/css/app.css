@@ -56,6 +56,7 @@ body {
   margin: 0 auto;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .container {
@@ -71,6 +72,7 @@ main {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.5s linear;
 }
 
 .hot {
@@ -604,9 +606,10 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 370px;
-  width: 1920px;
+  padding: 15px 15px;
+  width: 1200px;
   background: #07041a;
+  border-radius: 0 0 20px 20px;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -687,10 +690,26 @@ main {
   border-radius: 13px;
   text-decoration: none;
 }
+.header-mode {
+  margin-left: 30px;
+}
 .header-sun, .header-moon {
   margin-left: 50px;
   cursor: pointer;
   width: 30px;
+}
+.header-cart {
+  color: #ad6709;
+  font-size: 33px;
+  margin-left: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.header-cart:hover {
+  color: #7a3067;
 }
 
 .dropbtn {
@@ -803,11 +822,10 @@ main {
   display: inline;
   background-color: transparent;
   cursor: pointer;
-  margin-left: 20px;
 }
 .userbtn img {
   display: inline;
-  margin-left: 10px;
+  margin-left: 15px;
   border: 2px #fff solid;
   width: 50px;
   height: 50px;
@@ -858,8 +876,9 @@ main {
   height: 400px;
   padding: 20px 25px;
   border-radius: 15px;
-  top: 13%;
-  transform: translateX(700%);
+  top: 9%;
+  right: 350px;
+  transform: scale(0);
   background-image: linear-gradient(to right, #0a1896, #9c106d);
   z-index: 9999;
   transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -900,7 +919,7 @@ main {
 }
 
 .is-show {
-  transform: translateX(600%);
+  transform: scale(1);
 }
 
 .is-mode {
@@ -914,8 +933,8 @@ main {
   }
 
   .is-show {
-    top: 11%;
-    transform: translateX(450%);
+    right: 150px;
+    transform: scale(1);
   }
 }
 @media screen and (max-width: 1439.98px) {
@@ -974,7 +993,9 @@ main {
   }
 
   .is-show {
-    transform: translateX(290%);
+    top: 10%;
+    right: 50px;
+    transform: scale(1);
   }
 
   main {
@@ -1108,6 +1129,10 @@ main {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+.light-mode {
+  background: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */
