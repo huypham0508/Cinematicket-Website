@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <div class="header-logo">
+            <img
+              src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/logo.png?raw=true"
+              alt=""
+            />
+          </div>
+          <h1 class="header-heading">Mua vé</h1>
+          <div class="header-more">
+            <div class="header-mode">
+              <div class="header-sun">
+                <img
+                  src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/sun.png?raw=true"
+                  alt=""
+                />
+              </div>
+              <div class="header-moon is-mode">
+                <img
+                  src="https://github.com/huypham0508/Cinematicket-Website/blob/master/home/images/moon.png?raw=true"
+                  alt=""
+                />
+              </div>
+            </div>
+            <span
+              style="color: #f3a616; font-weight: bold; margin-left: 20px"
+              class="coin"
+            >
+              300 coin
+            </span>
+            <div class="insert-coin">
+              <h6 class="insert-title">Nhập coin cần nạp</h6>
+              <input class="insert-input" placeholder="500" type="number" />
+              <button class="insert-button">Nạp tiền</button>
+            </div>
+            <div class="user">
+              <div class="userbtn">
+                <img
+                  src="https://images.unsplash.com/photo-1653764802792-b2644a66b246?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="user-content">
+                <span
+                  style="color: #f3a616; font-weight: bold"
+                  class="user-coin"
+                  ><ion-icon name="card-outline"></ion-icon>
+                  300 coin
+                </span>
+                <span class="user-btn">Thay đổi avatar</span>
+                <button class="menu-active">Tùy chọn</button>
+              </div>
+              <ion-icon class="user-icon" name="caret-down-outline"> </ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="cart">
+        <div class="container">
+          <div class="cart-container">
+            <div class="cart-header">
+              <span class="cart-name">Tên phim</span>
+              <span class="cart-cinema">Rạp</span>
+              <span class="cart-room">Phòng</span>
+              <span class="cart-chair">Ghế</span>
+              <span class="cart-cinema">Ngày/Giờ</span>
+            </div>
+            <div class="cart-items">
+              <div class="cart-items-img">
+                <img src="./images/ticket.png" alt="" />
+              </div>
+              <div class="cart-items-name">Em và Trịnh</div>
+              <div class="cart-items-cinema">CGV</div>
+              <div class="cart-items-room">01</div>
+              <div class="cart-items-chair">A4</div>
+              <div class="cart-items-datetime">
+                <div>
+                  <label for="">20/06/2022</label>
+                </div>
+                <div>
+                  <label for="">10:30AM</label>
+                </div>
+              </div>
+            </div>
+            <div class="cart-more">
+              <a class="cart-new" href="#">Thêm vé vào giỏ</a>
+              <button class="cart-button">Thanh toán</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
